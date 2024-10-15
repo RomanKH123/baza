@@ -1,0 +1,5 @@
+@media print {
+	button, a, .tabl_1{
+		display: none;
+	}
+}

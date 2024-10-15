@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+table{
+    background-color: #ffffff;
+}
+td,th{
+    border: 1px solid black;
+    padding: 4px;
+}
+a{
+    background-color: rgb(85, 111, 194);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 3px;
+}
+button{
+    background-color: rgb(85, 111, 194);
+    color: #ffffff;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+}
+.logo{
+    margin-top: 40vh;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo *{
+    margin-top: 1vh;
+}
+.logo input{
+    
+    width: 30%;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo select{
+    
+    width: 30%;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo button{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+.logo a{
+    width: 10%;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_2{
+    margin-top: 40vh;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_2 *{
+    margin-top: 1.1vh;
+}
+.logo_2 input{
+    
+    width: 30%;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_2 select{
+    
+    width: 10%;
+    display: none;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_2 button{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+.logo_2 a{
+    text-align: center;
+    width: 10%;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_3{
+    margin-top: 40vh;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_3 *{
+    margin-top: 1vh;
+}
+.logo_3 select{    
+    width: 10%;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_3 button{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+
+
+.tabl{
+    margin-top: 5vh;
+    width: 100%;
+}
+.tabl table{
+    
+    border-collapse: collapse;
+    width: 80%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.tabl_1{
+    margin-top: 5vh;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+.tabl_1 *{
+    padding: 3px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tabl_2{
+    display: inline-block;
+    align-items: center;
+    
+}
+.select_2{
+    display: none;
+}
