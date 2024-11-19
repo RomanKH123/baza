@@ -1,5 +1,5 @@
 <?php
-    require_once 'table.php';
+    require_once './server/table.php';
     //Таблица потребителей
 ?>
 <!DOCTYPE html>
@@ -25,24 +25,24 @@
             </tr>
             <?php  while($row = mysqli_fetch_array($potreb)){?>
             <tr>
-                <td><?php echo $row['ID потребителя'] ?></td>
-                <td><?php echo $row['Название потребителя'];?></td>
-                <td><?php echo $row['Адрес потребителя'] ?></td>
-                <td><?php echo $row['Расчётный счёт']?></td>
-                <td><?php echo $row['Статус']?></td>
-                <td><a href = "/rename.php?id=<?=$row['ID потребителя']?>&tabl=2">Редактировать</a></td>
-                <td><a href = "/delate.php?id=<?=$row['ID потребителя']?>&tabl=2">Удалить</a></td>                
+                <td><?=$row['IDпотребителя'] ?></td>
+                <td><?=$row['Названиепотребителя'];?></td>
+                <td><?=$row['Адреспотребителя'] ?></td>
+                <td><?=$row['Расчётныйсчёт']?></td>
+                <td><?=$row['Статус']?></td>
+                <td><a href = "/rename.php?id=<?=$row['IDпотребителя']?>&tabl=2">Редактировать</a></td>
+                <td><a href = "/server/delate.php?id=<?=$row['IDпотребителя']?>&tabl=2">Удалить</a></td>                
             </tr>
             <?php }?>
             
         </table>
         <div class = "tabl_1">
-            <a href="dop.php?table=2">Добавить</a>
-            <form method="post" action="print_2.php">
+            <a href="/dop.php?table=2">Добавить</a>
+            <form method="post" action="/print_2.php">
             <select class="select_1" name = "country">
                 <option value="">Выберите потребителя</option>
                 <?php while($row_s = mysqli_fetch_array($potreb_1)){?>
-                <option value="<?=$row_s['Название потребителя']?>"><?=$row_s['Название потребителя']?></option>
+                <option value="<?=$row_s['Названиепотребителя']?>"><?=$row_s['Названиепотребителя']?></option>
                 <?php }?>
             </select>
             <input name = "table" type = "hidden" value="2">

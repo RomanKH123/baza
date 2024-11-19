@@ -13,17 +13,17 @@
 <body>
     <div id = "index">
     <div>
-        <form method = "POST" class="logo_3" action="db.php">
+        <form method = "POST" class="logo_3" action="/server/db.php">
             <select class="select_1" name = "country">
                 <option value="">Выберите базу</option>
                 <option value="klient">Потребители</option>
                 <option value="postav">Поставщики</option>
                 <option value="torgovly">Торговля</option>
-                <option value="otkaz">Возврат</option>
+                <option value="otkaz">Возвраты</option>
                 <option value="sertif">Сертификаты</option>
             </select>        
             <button type = "submit" >Принять</button>
-        </form>
+        </form> 
         
     </div>
     </div>

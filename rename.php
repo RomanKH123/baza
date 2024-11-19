@@ -17,14 +17,14 @@
         <select class="select_1" name = "country_1" type = "<?=$bp?>">
                 <option value="<?=$row_c?>"><?php echo $row_c?></option>
                 <?php while($row_bp = mysqli_fetch_array($potreb)){?>
-                <option value="<?=$row_bp['Название потребителя']?>"><?=$row_bp['Название потребителя']?></option>
+                <option value="<?=$row_bp['Названиепотребителя']?>"><?=$row_bp['Названиепотребителя']?></option>
                 <?php }?>
             </select>
         <input name="d" type = "<?=$b?>" value="<?=$row_d?>" placeholder="<?=$p_d?>">
         <select class="select_1" name = "country_2" type = "<?=$bp?>">
                 <option value="<?=$row_d?>"><?php echo $row_d?></option>
                 <?php while($row_bp = mysqli_fetch_array($postav)){?>
-                <option value="<?=$row_bp['Название изготовителя']?>"><?=$row_bp['Название изготовителя']?></option>
+                <option value="<?=$row_bp['Названиеизготовителя']?>"><?=$row_bp['Названиеизготовителя']?></option>
                 <?php }?>
             </select>
         <input name="e" type = "<?=$type_e?>" value="<?=$row_e?>" placeholder="<?=$p_e?>">

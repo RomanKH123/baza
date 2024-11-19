@@ -1,5 +1,5 @@
 <?php
-    require_once 'table.php';
+    require_once './server/table.php';
     // Вся торговля
 ?>
 <!DOCTYPE html>
@@ -23,21 +23,19 @@
                 <td></td>
             </tr>
             <?php  while($row = mysqli_fetch_array($torgovly)){
-                    $a = $row['ID потребителя'];
-                    $b = $row['ID изготовителя'];
-                    $sql_1 = mysqli_query($conect,"SELECT * FROM `potreb` WHERE `ID потребителя` = '$a'");
-                    $sql_2 = mysqli_query($conect,"SELECT * FROM `postav` WHERE `ID изготовителя` = '$b'");              
+                    $a = $row['IDпотребителя'];
+                    $b = $row['IDизготовителя'];
+                    $row_2 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `potreb` WHERE `IDпотребителя` = '$a'"));
+                    $row_3 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `postav` WHERE `IDизготовителя` = '$b'"));             
                 ?>
             <tr>
-                <td><?php echo $row['ID операции'] ?></td>
-                <td><?php echo $row['Товар']?></td>
-                <td><?php while($row_2 = mysqli_fetch_array($sql_1)){                            
-                            echo  $row_2['Название потребителя'];}?></td>
-                <td><?php while($row_3 = mysqli_fetch_array($sql_2)){                            
-                            echo $row_3['Название изготовителя'];}?></td>
-                <td><?php echo $row['Дата']?></td>
-                <td><a href = "/rename.php?id=<?=$row['ID операции']?>&tabl=3">Редактировать</a></td>
-                <td><a href = "/delate.php?id=<?=$row['ID операции']?>&tabl=3">Удалить</a></td>
+                <td><?= $row['IDоперации'] ?></td>
+                <td><?= $row['Товар']?></td>
+                <td><?= $row_2['Названиепотребителя']?></td>
+                <td><?= $row_3['Названиеизготовителя']?></td>
+                <td><?= $row['Дата']?></td>
+                <td><a href = "/rename.php?id=<?=$row['IDоперации']?>&tabl=3">Редактировать</a></td>
+                <td><a href = "/server/delate.php?id=<?=$row['IDоперации']?>&tabl=3">Удалить</a></td>
                 
                 
             </tr>
@@ -45,8 +43,8 @@
             
         </table>
         <div class = "tabl_1">
-            <a href="dop.php?table=3">Добавить</a>
-            <form method="post" action="print.php">
+            <a href="/dop.php?table=3">Добавить</a>
+            <form method="post" action="/print.php">
             <input name = "data" type="date">
             <input name = "table" type = "hidden" value="3">
             <button type = "submit" >Открыть</button>

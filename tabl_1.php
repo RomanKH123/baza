@@ -1,5 +1,5 @@
 <?php
-    require_once 'table.php';
+    require_once './server/table.php';
     //тАБЛИЦА ИЗГОТОВИТЕЛЕЙ
 ?>
 
@@ -25,17 +25,16 @@
                 <td></td>
             </tr>
             <?php  while($row = mysqli_fetch_array($postav)){
-                 $a = $row['ID сертификата'];
-                 $sql_1 = mysqli_query($conect,"SELECT * FROM `sertif` WHERE `ID сертификата` = '$a'");?>
+                 $a = $row['IDсертификата'];
+                 $row_2 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `sertif` WHERE `IDсертификата` = '$a'"))?>
             <tr>
-                <td><?php echo $row['ID изготовителя'] ?></td>
-                <td><?php echo $row['Название изготовителя'];?></td>
-                <td><?php while($row_2 = mysqli_fetch_array($sql_1)){                            
-                            echo  $row_2['Название'];}?></td>
-                <td><?php echo $row['Расчётный счёт']?></td>
-                <td><?php echo $row['Товар']?></td>
-                <td><a href = "/rename.php?id=<?=$row['ID изготовителя']?>&tabl=1">Редактировать</a></td>
-                <td><a href = "/delate.php?id=<?=$row['ID изготовителя']?>&tabl=1">Удалить</a></td>
+                <td><?=$row['IDизготовителя'] ?></td>
+                <td><?=$row['Названиеизготовителя'];?></td>
+                <td><?= $row_2['Название']?></td>
+                <td><?=$row['Расчётныйсчёт']?></td>
+                <td><?=$row['Товар']?></td>
+                <td><a href = "/rename.php?id=<?=$row['IDизготовителя']?>&tabl=1">Редактировать</a></td>
+                <td><a href = "/server/delate.php?id=<?=$row['IDизготовителя']?>&tabl=1">Удалить</a></td>
             </tr>
             <?php }?>
             

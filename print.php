@@ -22,18 +22,16 @@
                 <td>Дата</td>
             </tr>
             <?php  while($row = mysqli_fetch_array($sql)){
-                    $a = $row['ID потребителя'];
-                    $b = $row['ID изготовителя'];
-                    $sql_1 = mysqli_query($conect,"SELECT * FROM `potreb` WHERE `ID потребителя` = '$a'");
-                    $sql_2 = mysqli_query($conect,"SELECT * FROM `postav` WHERE `ID изготовителя` = '$b'");              
+                    $a = $row['IDпотребителя'];
+                    $b = $row['IDизготовителя'];                                
+                    $row_2 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `potreb` WHERE `IDпотребителя` = '$a'"));
+                    $row_3 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `postav` WHERE `IDизготовителя` = '$b'"));
                 ?>
             <tr>
                 <td><?= $row['ID операции'] ?></td>
                 <td><?= $row['Товар']?></td>
-                <td><?php while($row_2 = mysqli_fetch_array($sql_1)){                            
-                            echo  $row_2['Название потребителя'];}?></td>
-                <td><?php while($row_3 = mysqli_fetch_array($sql_2)){                            
-                            echo $row_3['Название изготовителя'];}?></td>
+                <td><?= $row_2['Названиепотребителя']?></td>
+                <td><?= $row_3['Названиеизготовителя']?></td>
                 <td><?= $row['Дата']?></td>
                 
             </tr>

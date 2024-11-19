@@ -25,13 +25,13 @@
             </tr>
             <?php  while($row = mysqli_fetch_array($sql)){?>
             <tr>
-                <td><?= $row['ID потребителя'] ?></td>
-                <td><?= $row['Название потребителя'];?></td>
-                <td><?= $row['Адрес потребителя'] ?></td>
-                <td><?= $row['Расчётный счёт']?></td>
+                <td><?= $row['IDпотребителя'] ?></td>
+                <td><?= $row['Названиепотребителя'];?></td>
+                <td><?= $row['Адреспотребителя'] ?></td>
+                <td><?= $row['Расчётныйсчёт']?></td>
                 <td><?= $row['Статус']?></td>
-                <td><a href = "/rename.php?id=<?=$row['ID потребителя']?>&tabl=2">Редактировать</a></td>
-                <td><a href = "/delate.php?id=<?=$row['ID потребителя']?>&tabl=2">Удалить</a></td>                
+                <td><a href = "/rename.php?id=<?=$row['IDпотребителя']?>&tabl=2">Редактировать</a></td>
+                <td><a href = "/delate.php?id=<?=$row['IDпотребителя']?>&tabl=2">Удалить</a></td>                
             </tr>
             <?php }?>
             

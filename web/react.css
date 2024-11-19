@@ -1,8 +1,4 @@
-button{
-    background-color: rgb(95, 170, 231);
-    border-radius: 5px;
-    padding: 1px;
-}
+
 .React_Log{
     
     width: 100%;
@@ -15,18 +11,25 @@ button{
     z-index: 99999;
     display: inline-flex;
     
-    background-color: rgba(109, 109, 109, 0.432);
+    background-color: rgb(136, 136, 136);
 }
 .Tap{
-    margin-top: 350px;
+    margin-top: 40vh;
     width: 30%;
     height: 13%;
+    padding: 1vh;
     display: inline-block;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+}
+.Tap button{
+    width: 17%;
+    background-color: rgb(85, 111, 194);
+    border-radius: 5px;
+    padding-top: 1px; padding-bottom: 1px;
 }
 .React_Input_a{
     display: block;
@@ -36,16 +39,10 @@ button{
     width: 80%;
     margin-top: 10px;
 }
-.React_Log_b{
-    display: none;
-}
-.React_error_a{
-    display: none;
-}
-.React_error_b{
+.React_error{
     color: rgb(221, 85, 75);
     font-size: clamp(16px,2vh,30px);
-    display: block;
+    display: none;
     align-items: center;
     margin-left: auto;
     margin-right: auto;

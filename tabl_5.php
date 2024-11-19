@@ -1,6 +1,6 @@
 <?php
-    require_once 'table.php';
-    //Сеотификаты ради галочки
+    require_once './server/table.php';
+    //Сеотификаты
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -26,20 +26,20 @@
                                 
                 ?>
             <tr>
-                <td><?php echo $row['ID сертификатa']?></td>
-                <td><?php echo $row['Название']?></td>
-                <td><?php echo $row['Разрешение на торговлю']?></td>
-                <td><?php echo $row['Разрешение на поставки']?></td>
-                <td><?php echo $row['Разрешение на логистику']?></td>
-                <td><a href = "/rename.php?id=<?=$row['ID сертификатa']?>&tabl=5">Редактировать</a></td>
-                <td><a href = "/delate.php?id=<?=$row['ID сертификатa']?>&tabl=5">Удалить</a></td>
+                <td><?= $row['IDсертификатa']?></td>
+                <td><?= $row['Название']?></td>
+                <td><?= $row['Разрешениенаторговлю']?></td>
+                <td><?= $row['Разрешениенапоставки']?></td>
+                <td><?= $row['Разрешениеналогистику']?></td>
+                <td><a href = "/rename.php?id=<?=$row['IDсертификата']?>&tabl=5">Редактировать</a></td>
+                <td><a href = "/server/delate.php?id=<?=$row['IDсертификата']?>&tabl=5">Удалить</a></td>
                 
             </tr>
             <?php }?>
             
         </table>
         <div class = "tabl_1">
-            <a href="dop.php?table=5">Добавить</a>
+            <a href="/dop.php?table=5">Добавить</a>
             
             <a href="javascript:history.back()">Назад</a>
         </div>

@@ -9,6 +9,9 @@ body{
 table{
     background-color: #ffffff;
 }
+table a{
+    margin: 2px;
+}
 td,th{
     border: 1px solid black;
     padding: 4px;
@@ -16,18 +19,32 @@ td,th{
 a{
     background-color: rgb(85, 111, 194);
     color: #ffffff;
+    border: 2px solid black;
     text-decoration: none;
+    font-size: clamp(9px,3vh,17px);
     padding: 2px;
     border-radius: 3px;
+    transition: 0.3s;
+}
+a:hover{
+    background-color: rgb(40, 53, 96);
 }
 button{
     background-color: rgb(85, 111, 194);
     color: #ffffff;
+    border: 2px solid black;
     display: block;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: clamp(9px,3vh,17px);
     border-radius: 3px;
+    padding: 2px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(40, 53, 96);
 }
 .logo{
     margin-top: 40vh;
@@ -64,11 +81,12 @@ button{
     width: 10%;
 }
 .logo a{
-    width: 10%;
+    text-align: center;
     display: block;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    width: 9%;
 }
 .logo_2{
     margin-top: 40vh;
@@ -106,11 +124,11 @@ button{
 }
 .logo_2 a{
     text-align: center;
-    width: 10%;
     display: block;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    width: 9%;
 }
 .logo_3{
     margin-top: 40vh;
@@ -124,7 +142,8 @@ button{
     margin-top: 1vh;
 }
 .logo_3 select{    
-    width: 10%;
+    width: 15%;
+    height: 4vh;
     display: block;
     align-items: center;
     margin-left: auto;
@@ -135,7 +154,9 @@ button{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    width: 10%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 7%;
 }
 
 
