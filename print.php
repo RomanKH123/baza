@@ -1,6 +1,6 @@
 <?php
-   require_once 'print_pl.php';
-   require_once 'table.php';
+   require_once './server/print_pl.php';
+   require_once './server/table.php';
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -28,7 +28,7 @@
                     $row_3 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `postav` WHERE `IDизготовителя` = '$b'"));
                 ?>
             <tr>
-                <td><?= $row['ID операции'] ?></td>
+                <td><?= $row['IDоперации'] ?></td>
                 <td><?= $row['Товар']?></td>
                 <td><?= $row_2['Названиепотребителя']?></td>
                 <td><?= $row_3['Названиеизготовителя']?></td>

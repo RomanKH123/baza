@@ -26,7 +26,7 @@
             <?php  while($row = mysqli_fetch_array($potreb)){?>
             <tr>
                 <td><?=$row['IDпотребителя'] ?></td>
-                <td><?=$row['Названиепотребителя'];?></td>
+                <td><?=$row['Названиепотребителя']?></td>
                 <td><?=$row['Адреспотребителя'] ?></td>
                 <td><?=$row['Расчётныйсчёт']?></td>
                 <td><?=$row['Статус']?></td>
@@ -39,14 +39,14 @@
         <div class = "tabl_1">
             <a href="/dop.php?table=2">Добавить</a>
             <form method="post" action="/print_2.php">
-            <select class="select_1" name = "country">
-                <option value="">Выберите потребителя</option>
-                <?php while($row_s = mysqli_fetch_array($potreb_1)){?>
-                <option value="<?=$row_s['Названиепотребителя']?>"><?=$row_s['Названиепотребителя']?></option>
-                <?php }?>
-            </select>
-            <input name = "table" type = "hidden" value="2">
-            <button type = "submit" >Открыть</button>
+                <select class="select_1" name = "country">
+                    <option value="">Выберите потребителя</option>
+                    <?php while($row_s = mysqli_fetch_array($potreb_1)){?>
+                    <option value="<?=$row_s['Названиепотребителя']?>"><?=$row_s['Названиепотребителя']?></option>
+                    <?php }?>
+                </select>
+                <input name="table" type="hidden" value="2">
+                <button type = "submit" >Открыть</button>
             </form>
             <a href="javascript:history.back()">Назад</a>
         </div>

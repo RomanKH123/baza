@@ -1,5 +1,5 @@
 <?php
-    require_once 'print_pl.php';
+    require_once './server/print_pl.php';
     //Печать
 ?>
 <!DOCTYPE html>

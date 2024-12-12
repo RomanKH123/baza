@@ -1,5 +1,5 @@
 <?php
-    require_once 'rename_pl.php';
+    require_once './interface/rename_pl.php';
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/web/main.css">
 </head>
 <body>
-    <form action="plus_1.php?tabl=<?=$tabl?>&id=<?=$id?> " method="post" class = "<?= $class?>">
+    <form action="/server/plus_1.php?tabl=<?=$_GET['tabl']?> " method="post" class = "<?= $class?>">
         <input name="a" type = "hidden" value="<?=$row_a?> ">
         <input name="b" type = "text" value="<?=$row_b?>" placeholder="<?=$p_b?>">
         <input name="c" type = "<?=$b?>" value="<?=$row_c?>" placeholder="<?=$p_c?>">

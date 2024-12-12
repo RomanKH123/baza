@@ -1,6 +1,6 @@
 <?php
-    require_once '/server/dop_pl.php';
-    require_once '/server/table.php';
+    require_once './server/dop_pl.php';
+    require_once './server/table.php';
 ?>
 <!DOCTYPE html>
 <html lang="ru">

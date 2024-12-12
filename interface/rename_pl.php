@@ -1,6 +1,6 @@
 <?php
 //Заполнение страницы редактирования
-    require_once 'table.php';   
+    require_once './server/table.php';   
     $id = $_GET['id'];
     $tabl = $_GET['tabl'];
     if($tabl == 1){
@@ -13,10 +13,10 @@
         $bp = "hidden";                
         $type_e = 'text';
         $row = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `postav` WHERE `IDизготовителя` = '$id'"));
+        $a = $row['IDсертификата']; 
         $row_2 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `sertif` WHERE `IDсертификата` = '$a'"));
         $row_a = $row['IDизготовителя'];
-        $row_b = $row['Названиеизготовителя'];
-        $a = $row['IDсертификата'];       
+        $row_b = $row['Названиеизготовителя'];      
         $row_c = $row_2['Название'];
         $row_d = $row['Расчётныйсчёт'];
         $row_e = $row['Товар'];
