@@ -12,9 +12,9 @@
     <title>Данные потребителей</title>
 </head>
 <body>
-    <div class = "tabl">
+    
         <table>
-            <tr>
+            <tr class = "fixed">
                 <td>ID</td>
                 <td>Имя</td>
                 <td>Адрес</td>
@@ -48,9 +48,9 @@
                 <input name="table" type="hidden" value="2">
                 <button type = "submit" >Открыть</button>
             </form>
-            <a href="javascript:history.back()">Назад</a>
+            <a href="/index_2.php">Назад</a>
         </div>
-    </div>
+
     
 </body>
 </html>

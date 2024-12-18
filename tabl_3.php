@@ -11,9 +11,9 @@
     <title>Данные торговли</title>
 </head>
 <body>
-    <div class = "tabl">
+    
         <table>
-            <tr>
+            <tr class = "fixed">
                 <td>ID</td>
                 <td>Товар</td>
                 <td>Потребитель</td>
@@ -25,19 +25,17 @@
             <?php  while($row = mysqli_fetch_array($torgovly)){
                     $a = $row['IDпотребителя'];
                     $b = $row['IDизготовителя'];
-                    $row_2 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `potreb` WHERE `IDпотребителя` = '$a'"));
-                    $row_3 = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `postav` WHERE `IDизготовителя` = '$b'"));             
+                    $row_2 = mysqli_fetch_array(mysqli_query($conect,"SELECT `Названиепотребителя` FROM `potreb` WHERE `IDпотребителя` = '$a'"));
+                    $row_3 = mysqli_fetch_array(mysqli_query($conect,"SELECT `Названиеизготовителя` FROM `postav` WHERE `IDизготовителя` = '$b'"));             
                 ?>
             <tr>
                 <td><?= $row['IDоперации'] ?></td>
-                <td><?= $row['Товар']?></td>
+                <td><?= $row[1]?></td>
                 <td><?= $row_2['Названиепотребителя']?></td>
                 <td><?= $row_3['Названиеизготовителя']?></td>
                 <td><?= $row['Дата']?></td>
                 <td><a href = "/rename.php?id=<?=$row['IDоперации']?>&tabl=3">Редактировать</a></td>
-                <td><a href = "/server/delate.php?id=<?=$row['IDоперации']?>&tabl=3">Удалить</a></td>
-                
-                
+                <td><a href = "/server/delate.php?id=<?=$row['IDоперации']?>&tabl=3">Удалить</a></td>         
             </tr>
             <?php }?>
             
@@ -50,9 +48,9 @@
             <button type = "submit" >Открыть</button>
             </form>
             
-            <a href="javascript:history.back()">Назад</a>
+            <a href="/index_2.php">Назад</a>
         </div>
-    </div>
+    
     
 </body>
 </html>

@@ -15,7 +15,7 @@
 <body>
     <div class = "tabl">
         <table>
-            <tr>
+            <tr class = "fixed">
                 <td>ID</td>
                 <td>Название</td>
                 <td>Сертификат</td>
@@ -42,7 +42,7 @@
         <div class = "tabl_1">
             <a href="dop.php?table=1">Добавить</a>
             <a onclick="print()">Печать</a>
-            <a href="javascript:history.back()">Назад</a>
+            <a href="/index_2.php">Назад</a>
         </div>
     </div>
     

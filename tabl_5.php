@@ -13,7 +13,7 @@
 <body>
     <div class = "tabl">
         <table>
-            <tr>
+            <tr class = "fixed">
                 <td>ID</td>
                 <td>Название</td>
                 <td>Торговля</td>
@@ -26,7 +26,7 @@
                                 
                 ?>
             <tr>
-                <td><?= $row['IDсертификатa']?></td>
+                <td><?= $row['IDсертификата']?></td>
                 <td><?= $row['Название']?></td>
                 <td><?= $row['Разрешениенаторговлю']?></td>
                 <td><?= $row['Разрешениенапоставки']?></td>
@@ -41,7 +41,7 @@
         <div class = "tabl_1">
             <a href="/dop.php?table=5">Добавить</a>
             
-            <a href="javascript:history.back()">Назад</a>
+            <a href="/index_2.php">Назад</a>
         </div>
     </div>
     

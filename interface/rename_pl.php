@@ -42,16 +42,16 @@
         $p_e = "Дата";
         $b = "hidden";
         $bp = "text";
-        $class = "logo";     
+        $type_e = 'date';
+        $class = "logo";   
         $row = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `torgovly` WHERE `IDоперации` = '$id'"));
+        $row_1 = $row['IDпотребителя'];
+        $row_2 = $row['IDизготовителя'];
         $row_f = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `potreb` WHERE `IDпотребителя` = '$row_1'"));
         $row_g = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `postav` WHERE `IDизготовителя` = '$row_2'"));        
-        $type_e = 'date';
         $row_a = $row['IDоперации'];
-        $row_b = $row['Товар'];
-        $row_1 = $row['IDпотребителя'];        
+        $row_b = $row['Товар'];        
         $row_c = $row_f['Названиепотребителя'];        
-        $row_2 = $row['ID изготовителя'];
         $row_d = $row_g['Названиеизготовителя'];
         $row_e = $row['Дата'];    
     } else if($tabl == 4){
@@ -61,14 +61,18 @@
         $p_d = "Изготовитель";
         $p_e = "Дата";
         $b = "hidden";
+        $type_e = 'date';
         $bp = "text";     
         $row = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `otkaz` WHERE `IDоперации` = '$id'"));
-        $type_e = 'date';
+        $row_1 = $row['IDпотребителя'];
+        $row_2 = $row['IDизготовителя'];
+        $row_f = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `potreb` WHERE `IDпотребителя` = '$row_1'"));
+        $row_g = mysqli_fetch_array(mysqli_query($conect,"SELECT * FROM `postav` WHERE `IDизготовителя` = '$row_2'"));        
         $row_a = $row['IDоперации'];
-        $row_b = $row['Товар'];
-        $row_c = $row['Названиепотребителя'];
-        $row_d = $row['Названиеизготовителя'];
-        $row_e = $row['Дата'];  
+        $row_b = $row['Товар'];        
+        $row_c = $row_f['Названиепотребителя'];        
+        $row_d = $row_g['Названиеизготовителя'];
+        $row_e = $row['Дата'];
     }else if($tabl == 5){
         $class = "logo_2"; 
         $p_b = "Название";

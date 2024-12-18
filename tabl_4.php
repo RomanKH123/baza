@@ -11,9 +11,9 @@
     <title>Данные отказов</title>
 </head>
 <body>
-    <div class = "tabl">
+    
         <table>
-            <tr>
+            <tr class = "fixed">
                 <td>ID</td>
                 <td>Товар</td>
                 <td>Потребитель</td>
@@ -30,7 +30,7 @@
                 ?>
             <tr>
                 <td><?= $row['IDоперации'] ?></td>
-                <td><?= $row['Товар']?></td>
+                <td><?= $row[2]?></td>
                 <td><?= $row_2['Названиепотребителя']?></td>
                 <td><?= $row_3['Названиеизготовителя']?></td>
                 <td><?= $row['Дата']?></td>
@@ -48,7 +48,7 @@
             <input name = "table" type = "hidden" value="4">
             <button type = "submit" >Открыть</button>
             </form>
-            <a href="javascript:history.back()">Назад</a>
+            <a href="/index_2.php">Назад</a>
         </div>
     </div>
     

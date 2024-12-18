@@ -7,15 +7,34 @@ body{
     background-color: rgb(238, 238, 238);
 }
 table{
+    display:block;
+    width: 80%;
+    max-height: 40vh;
+    margin-top: 5vh;
+    border-collapse: collapse;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #ffffff;
+    overflow-y: scroll;
 }
+td,th{
+    width: 20vw;  
+    border: 1px solid rgb(0, 0, 0);
+    padding: 4px;
+    
+}
+
 table a{
     margin: 2px;
 }
-td,th{
-    border: 1px solid black;
-    padding: 4px;
+.fixed{
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
 }
+
+
 a{
     background-color: rgb(85, 111, 194);
     color: #ffffff;
@@ -141,6 +160,10 @@ button:hover{
 .logo_3 *{
     margin-top: 1vh;
 }
+.logo_3 a{
+    margin-top: 5vh;
+    border: none;
+}
 .logo_3 select{    
     width: 15%;
     height: 4vh;
@@ -160,20 +183,6 @@ button:hover{
 }
 
 
-
-.tabl{
-    margin-top: 5vh;
-    width: 100%;
-}
-.tabl table{
-    
-    border-collapse: collapse;
-    width: 80%;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-
-}
 .tabl_1{
     margin-top: 5vh;
     width: 100%;
