@@ -24,4 +24,8 @@ if ($_GET['tabl']== 5){
     mysqli_query($conect,"DELETE FROM sertif WHERE `sertif`.`IDсертификата` = '$id'");
     header('Location: ../tabl_5.php');
 }
+if ($_GET['tabl']== 6){
+    mysqli_query($conect,"DELETE FROM history WHERE `history`.`ID` = '$id'");
+    header('Location: ../tabl_6.php');
+}
 ?>

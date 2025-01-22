@@ -25,7 +25,7 @@
                 <td><?= $row['IDзапис']?></td>
                 <td><?= $row['Таблица']?></td>
                 <td><?= $row['Время']?></td>
-                <td><a href = "/server/delate.php?id=<?=$row['IDсертификата']?>&tabl=5">Удалить</a></td>
+                <td><a href = "/server/delate.php?id=<?=$row['ID']?>&tabl=6">Удалить</a></td>
                 
             </tr>
             <?php }?>

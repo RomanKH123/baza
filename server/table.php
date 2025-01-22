@@ -20,5 +20,5 @@
                             ORDER BY `IDоперации` DESC');
     
     $sertif = mysqli_query($conect,'SELECT * FROM `sertif`');
-    $history = mysqli_query($conect, 'SELECT * FROM `history`');
+    $history = mysqli_query($conect, 'SELECT * FROM `history`  ORDER BY `ID` DESC');
 ?>

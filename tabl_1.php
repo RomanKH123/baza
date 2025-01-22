@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/web/main.css">
     <link media="print" rel="stylesheet" href="/web/print.css">
+    <link media="print" rel="stylesheet" href="/web/print.css">
     <title>Данные поставщиков</title>
 </head>
 <body>
@@ -42,6 +43,7 @@
         <div class = "tabl_1">
             <a href="dop.php?table=1">Добавить</a>
             <a onclick="print()">Печать</a>
+            <a href="/server/exp/main.php?table=1">Экспорт</a>
             <a href="/index_2.php">Назад</a>
         </div>
     </div>
