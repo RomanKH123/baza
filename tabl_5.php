@@ -7,7 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="/web/main.css">
+    <link media="print" rel="stylesheet" href="/web/print.css">
     <title>Сертификаты</title>
 </head>
 <body>
@@ -40,7 +42,8 @@
         </table>
         <div class = "tabl_1">
             <a href="/dop.php?table=5">Добавить</a>
-            
+            <a href="/server/exp/main.php?table=5">Экспорт</a>
+            <a onclick="print()">Печать</a>
             <a href="/index_2.php">Назад</a>
         </div>
     </div>

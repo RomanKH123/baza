@@ -7,7 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="/web/main.css">
+    <link media="print" rel="stylesheet" href="/web/print.css">
     <title>Данные торговли</title>
 </head>
 <body>
@@ -47,7 +49,8 @@
             <input name = "table" type = "hidden" value="3">
             <button type = "submit" >Открыть</button>
             </form>
-            
+            <a href="/server/exp/main.php?table=3">Экспорт</a>
+            <a onclick="print()">Печать</a>
             <a href="/index_2.php">Назад</a>
         </div>
     
