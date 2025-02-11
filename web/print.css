@@ -2,4 +2,9 @@
 	button, a, .tabl_1{
 		display: none;
 	}
+	table{
+		max-width: 90vh;
+		overflow-y: auto;
+		border-collapse: none;
+	}
 }
